@@ -1,0 +1,26 @@
+NODE COMMANDS
+-------------
+npm init -y
+npm install express
+npm i dotenv
+npm i mongoose
+npm run dev
+
+REACT COMMANDS
+--------------
+npx create-react-app frontend
+
+
+GIT COMMANDS
+-------------
+git init
+
+git status
+git add .
+git commit -m "add workout controller"
+git log --oneline
+
+git push origin main
+git pull
+
+git reset 69f31b0
