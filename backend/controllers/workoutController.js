@@ -23,6 +23,13 @@ res.status(200).json(wo)
 //create wo
 const createWorkout = async (req,res)=>{
 const {title, load, reps} = req.body;
+let emptyFields =[];
+!title &&  emptyFields.push('title');
+!load &&  emptyFields.push('load');
+!reps &&  emptyFields.push('reps');
+if(emptyFields.length>0){
+    return res.status(400).json({error: 'Please fill in the blank fields', emptyFields})
+}
 try {
 const workout = await Workout.create({title,reps,load})
 res.status(200).json(workout)
